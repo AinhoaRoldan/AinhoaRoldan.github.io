@@ -1,0 +1,178 @@
+/* ===== Nexus Travel · Prototipo (1440 px) ===== */
+:root {
+  --fondo: #140925;
+  --fondo-2: #1a0e2f;
+  --superficie: #211437;
+  --superficie-2: #2a1b45;
+  --borde: rgba(226, 173, 59, .24);
+  --borde-suave: rgba(255, 255, 255, .08);
+  --oro: #e2ad3b;
+  --oro-claro: #fbe08a;
+  --oro-oscuro: #b8760f;
+  --texto: #f3ecdc;
+  --texto-2: #bdb0c9;
+  --texto-3: #8b7fa0;
+  --exito: #6fcf97;
+  --privado: #a99cff;
+  --radio: 14px;
+  --sombra: 0 18px 40px rgba(0, 0, 0, .35);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { background: var(--fondo); }
+body {
+  width: 1440px; margin: 0 auto; min-height: 100vh;
+  background: var(--fondo); color: var(--texto);
+  font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+svg.ico { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.contenedor { width: 1200px; margin: 0 auto; }
+
+/* ---------- Tipografía ---------- */
+.display { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.05; letter-spacing: -.01em; }
+.display em { font-style: italic; color: var(--oro-claro); }
+.antetitulo { font-size: 12px; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: var(--oro); }
+.h-seccion { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 48px; line-height: 1.1; margin-top: 10px; }
+.h-seccion em { font-style: italic; color: var(--oro-claro); }
+.lead { font-size: 18px; color: var(--texto-2); max-width: 620px; }
+.suave { color: var(--texto-2); }
+.mini { font-size: 13px; color: var(--texto-3); }
+.oro-txt { color: var(--oro); }
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  height: 48px; padding: 0 26px; border-radius: 999px;
+  font-weight: 600; font-size: 15px; letter-spacing: .01em; white-space: nowrap; cursor: pointer;
+  border: 1.5px solid transparent;
+}
+.btn-oro { background: linear-gradient(180deg, var(--oro-claro), var(--oro) 55%, var(--oro-oscuro)); color: #1a0d2e; box-shadow: 0 8px 22px rgba(226, 173, 59, .25); }
+.btn-linea { border-color: var(--oro); color: var(--oro-claro); }
+.btn-fantasma { color: var(--texto-2); border-color: var(--borde-suave); }
+.btn-sm { height: 38px; padding: 0 18px; font-size: 14px; }
+.btn-xl { height: 56px; padding: 0 32px; font-size: 16px; }
+
+/* ---------- Cabecera ---------- */
+.cabecera { height: 84px; border-bottom: 1px solid var(--borde-suave); background: rgba(20, 9, 37, .92); }
+.cabecera .contenedor { height: 100%; display: flex; align-items: center; gap: 48px; }
+.marca { display: flex; align-items: center; gap: 12px; }
+.marca img { width: 42px; height: 42px; }
+.marca b { font-weight: 900; font-size: 20px; letter-spacing: .08em; color: var(--oro-claro); }
+.marca span { font-weight: 300; font-size: 20px; letter-spacing: .14em; color: var(--oro); }
+.nav { display: flex; gap: 34px; font-size: 15px; font-weight: 500; color: var(--texto-2); }
+.nav a { position: relative; padding: 8px 0; }
+.nav a.activo { color: var(--oro-claro); }
+.nav a.activo::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--oro); border-radius: 2px; }
+.cabecera .acciones { margin-left: auto; display: flex; gap: 12px; }
+
+/* ---------- Pie ---------- */
+.pie { margin-top: 120px; border-top: 1px solid var(--borde-suave); background: var(--fondo-2); }
+.pie .contenedor { padding: 64px 0 28px; }
+.pie-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; }
+.pie h4 { font-size: 13px; letter-spacing: .24em; text-transform: uppercase; color: var(--oro); margin-bottom: 18px; }
+.pie ul { list-style: none; display: grid; gap: 10px; font-size: 15px; color: var(--texto-2); }
+.pie .legal { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--borde-suave); display: flex; justify-content: space-between; font-size: 13px; color: var(--texto-3); }
+.pie .legal nav { display: flex; gap: 28px; }
+
+/* ---------- Tarjetas y bloques ---------- */
+.tarjeta { background: var(--superficie); border: 1px solid var(--borde-suave); border-radius: var(--radio); padding: 28px; }
+.tarjeta.oro { border-color: var(--borde); }
+.icono-caja {
+  width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+  background: rgba(226, 173, 59, .12); color: var(--oro-claro); border: 1px solid var(--borde);
+}
+.icono-caja svg.ico { width: 24px; height: 24px; }
+.enlace { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; color: var(--oro-claro); }
+.enlace svg.ico { width: 16px; height: 16px; }
+.seccion { padding-top: 110px; }
+.cabeza-seccion { display: flex; align-items: end; justify-content: space-between; margin-bottom: 44px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.etiqueta { display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 12px; border-radius: 999px; font-size: 12px; font-weight: 600; background: rgba(226, 173, 59, .12); color: var(--oro-claro); border: 1px solid var(--borde); }
+.etiqueta.ok { background: rgba(111, 207, 151, .12); color: var(--exito); border-color: rgba(111, 207, 151, .3); }
+.etiqueta.priv { background: rgba(169, 156, 255, .12); color: var(--privado); border-color: rgba(169, 156, 255, .3); }
+.lista-check { list-style: none; display: grid; gap: 12px; }
+.lista-check li { display: flex; gap: 12px; color: var(--texto-2); font-size: 15px; }
+.lista-check li svg.ico { color: var(--oro); width: 18px; height: 18px; margin-top: 3px; }
+.separador { height: 1px; background: var(--borde-suave); margin: 24px 0; }
+
+/* ---------- Cabecera de página interior ---------- */
+.cabeza-pagina { padding: 64px 0 56px; background: radial-gradient(ellipse at 20% 0%, #2a1650 0%, transparent 60%); border-bottom: 1px solid var(--borde-suave); }
+.migas { font-size: 13px; color: var(--texto-3); margin-bottom: 18px; }
+.migas a { color: var(--texto-2); }
+.cabeza-pagina h1 { font-size: 64px; }
+
+/* ---------- Formularios ---------- */
+.campo { display: grid; gap: 8px; }
+.campo label { font-size: 13px; font-weight: 600; color: var(--texto-2); letter-spacing: .02em; }
+.entrada {
+  height: 52px; border-radius: 12px; border: 1px solid var(--borde-suave); background: var(--fondo-2);
+  display: flex; align-items: center; gap: 12px; padding: 0 16px; font-size: 15px; color: var(--texto);
+}
+.entrada svg.ico { color: var(--oro); width: 18px; height: 18px; }
+.entrada.ph { color: var(--texto-3); }
+.entrada.foco { border-color: var(--oro); box-shadow: 0 0 0 4px rgba(226, 173, 59, .12); }
+.entrada.area { height: 132px; align-items: start; padding-top: 14px; }
+.entrada .flecha { margin-left: auto; color: var(--texto-3); }
+
+/* ---------- Pasos del presupuesto ---------- */
+.pasos { display: flex; align-items: center; gap: 16px; margin-top: 36px; }
+.paso { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: var(--texto-3); }
+.paso i { font-style: normal; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid var(--borde-suave); font-size: 14px; }
+.paso.hecho { color: var(--texto-2); }
+.paso.hecho i { background: rgba(226, 173, 59, .14); border-color: var(--oro); color: var(--oro-claro); }
+.paso.activo { color: var(--oro-claro); }
+.paso.activo i { background: var(--oro); border-color: var(--oro); color: #1a0d2e; }
+.pasos .linea { flex: 1; height: 1.5px; background: var(--borde-suave); }
+.pasos .linea.hecha { background: var(--oro); }
+.layout-presupuesto { display: grid; grid-template-columns: 1fr 380px; gap: 32px; margin-top: 48px; align-items: start; }
+.botonera { display: flex; justify-content: space-between; align-items: center; margin-top: 32px; }
+
+/* ---------- Opciones seleccionables ---------- */
+.opcion { position: relative; border: 1.5px solid var(--borde-suave); border-radius: var(--radio); padding: 18px; background: var(--superficie); }
+.opcion.sel { border-color: var(--oro); background: linear-gradient(180deg, rgba(226, 173, 59, .10), rgba(226, 173, 59, .03)); }
+.opcion .marca-sel { position: absolute; top: 18px; right: 18px; width: 22px; height: 22px; border-radius: 6px; border: 1.5px solid var(--texto-3); display: grid; place-items: center; }
+.opcion.sel .marca-sel { background: var(--oro); border-color: var(--oro); color: #1a0d2e; }
+.opcion .marca-sel svg.ico { width: 14px; height: 14px; stroke-width: 3; }
+.opcion.radio .marca-sel { border-radius: 50%; }
+
+/* ---------- Tabla de desglose ---------- */
+.desglose { width: 100%; border-collapse: collapse; }
+.desglose th { text-align: left; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--texto-3); font-weight: 600; padding: 0 0 14px; border-bottom: 1px solid var(--borde-suave); }
+.desglose td { padding: 22px 0; border-bottom: 1px solid var(--borde-suave); vertical-align: top; }
+.desglose td.importe { text-align: right; font-weight: 700; font-size: 17px; white-space: nowrap; }
+.desglose th.importe { text-align: right; }
+.desglose .cat { display: flex; gap: 16px; }
+.desglose .cat b { display: block; font-size: 16px; }
+.fila-total { display: flex; justify-content: space-between; padding: 10px 0; color: var(--texto-2); font-size: 15px; }
+.fila-total.grande { color: var(--texto); font-size: 18px; font-weight: 700; padding-top: 18px; margin-top: 8px; border-top: 1px solid var(--borde-suave); }
+.fila-total.grande span:last-child { font-size: 30px; color: var(--oro-claro); font-family: 'Cormorant Garamond', serif; }
+
+/* ---------- Aplicación (área de empresa) ---------- */
+.app { display: grid; grid-template-columns: 272px 1fr; min-height: 100vh; }
+.lateral { background: var(--fondo-2); border-right: 1px solid var(--borde-suave); padding: 28px 20px; display: flex; flex-direction: column; }
+.lateral .marca { padding: 0 8px 28px; border-bottom: 1px solid var(--borde-suave); }
+.lateral .marca b, .lateral .marca span { font-size: 17px; }
+.menu-app { display: grid; gap: 4px; margin-top: 24px; }
+.menu-app a { display: flex; align-items: center; gap: 14px; height: 46px; padding: 0 14px; border-radius: 10px; font-size: 15px; font-weight: 500; color: var(--texto-2); }
+.menu-app a.activo { background: rgba(226, 173, 59, .12); color: var(--oro-claro); }
+.menu-app a .num { margin-left: auto; font-size: 12px; font-weight: 700; background: var(--superficie-2); color: var(--texto-2); padding: 2px 9px; border-radius: 999px; }
+.lateral .abajo { margin-top: auto; }
+.usuario { display: flex; align-items: center; gap: 12px; padding: 14px; border-radius: 12px; background: var(--superficie); }
+.avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #1a0d2e; background: linear-gradient(180deg, var(--oro-claro), var(--oro)); font-size: 14px; }
+.principal { padding: 36px 48px 64px; }
+.barra-app { display: flex; align-items: center; justify-content: space-between; margin-bottom: 36px; }
+.barra-app h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 44px; line-height: 1.1; }
+.kpi .valor { font-family: 'Cormorant Garamond', serif; font-size: 44px; line-height: 1; color: var(--oro-claro); margin-top: 14px; }
+.kpi .mini { margin-top: 6px; }
+.tabla { width: 100%; border-collapse: collapse; font-size: 15px; }
+.tabla th { text-align: left; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-3); font-weight: 600; padding: 0 12px 14px; border-bottom: 1px solid var(--borde-suave); }
+.tabla td { padding: 18px 12px; border-bottom: 1px solid var(--borde-suave); color: var(--texto-2); }
+.tabla td b { color: var(--texto); font-weight: 600; }
+.entrada span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tabla td { white-space: nowrap; }
+.nowrap { white-space: nowrap; }
